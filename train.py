@@ -12,13 +12,13 @@ with open(file_path, 'r', encoding='utf-8') as f:
 # examine all the unique characters that occur in this text
 chars = sorted(list(set(text)))
 vocab_size = len(chars) # possible elements of our sequences
-# print(''.join(chars)) 
-# print(vocab_size)
+print(''.join(chars)) 
+print(vocab_size)
 
 # strategy to tokenize input text
 # tokenize means to convert the raw string (as text) to some sequence of integers according to some notebook
 # because this is a character level model, we will translate individual characters into integers
-
+'''
 # create a mapping from characters to integers (character level tokenizer)
 # this is one of many possible encodings/tokenizers (a very simple one)
 # Google uses SentencePiece (https://github.com/google/sentencepiece), which encodes text into integers, but in a different schema and using a different vocabulary. It is a sub-word tokenizer, a middle ground between character encoding and word encoding.
@@ -165,3 +165,4 @@ print(decode(m.generate(idx = torch.zeros((1, 1), dtype=torch.long), max_new_tok
 # https://colab.research.google.com/drive/1JMLa53HDuA-i7ZBmqV7ZnA3c_fvtXnx-?usp=sharing#scrollTo=Q3k1Czf7LuA9
 
 
+'''
