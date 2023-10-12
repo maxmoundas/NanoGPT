@@ -1,3 +1,8 @@
+data/dataset_char/*.pkl
+data/dataset_char/*.bin
+
+out-dataset-char
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

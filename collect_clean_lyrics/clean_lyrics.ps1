@@ -1,6 +1,6 @@
 ﻿# Define the input and output file paths
-$inputFile = "C:\Users\maxmo\OneDrive\Desktop\travis_scott_lyrics.csv"
-$outputFile = "C:\Users\maxmo\OneDrive\Desktop\cleaned_travis_scott_lyrics.csv"
+$inputFile = ""
+$outputFile = ""
 
 # Import the CSV file
 $csvData = Import-Csv -Path $inputFile
