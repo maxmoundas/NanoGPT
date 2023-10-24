@@ -9,7 +9,7 @@ import pickle
 import requests
 import numpy as np
 
-input_file_path = 'datasets\\travisscott.txt' 
+input_file_path = 'datasets\\shakespeare.txt' 
 with open(input_file_path, 'r') as f:
     data = f.read()
 print(f"length of dataset in characters: {len(data):,}")

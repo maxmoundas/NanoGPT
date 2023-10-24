@@ -4,12 +4,20 @@ NanoGPT is a simple character-level GPT model that can easily be trained on any 
 
 ## Install Dependencies
 ```
-pip install torch numpy transformers datasets tiktoken wandb tqdm
+pip install numpy transformers datasets tiktoken wandb tqdm
+```
+IF you have a GPU (and would like to use it), install CUDA 12.1 (and cuDNN) and then run this command to get the compatible version of Pytorch:
+```
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
+If you do NOT have a GPU you would like to use:
+```
+pip install torch
 ```
 
 # Quick Start
 1. Store your dataset in the 'datasets' directory (or use one of the existing datasets), and provide the filename in data\dataset_char\prepare.py
-2. To prepare/tokenize the dataset, run:
+2. To prepare/tokenize the dataset, assign the path of the dataset to the input_file_path variable in prepare.py and run it:
 ```
 python data/dataset_char/prepare.py
 ```
@@ -31,4 +39,5 @@ python sample.py --out_dir=out-dataset-char
 
 Datasets:
 * shakespeare.txt: All of Shakespeare's work, which can be downloaded at: https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt
-* travisscott.txt: All of Travis Scott's lyrics (as of October 10, 2023)
+* travis_scott.txt: All of Travis Scott's lyrics (as of October 10, 2023)
+* trump_tweets.txt: All of President Trump's tweets (excluding retweets)
